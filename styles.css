@@ -1,0 +1,123 @@
+.body {
+  /* background-color: #242424; */
+  color: #f1eef6;
+  margin: 0%;
+  font-size: 20px;
+  line-height: 25pt;
+  background-color: #242424;
+  font-family: 'Lato', sans-serif;
+}
+
+/* * {
+  transition-duration: 0.2s;
+} */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.2fr 0.6fr 1.2fr 0.2fr;
+  /* grid-template-rows: 0.6fr 1fr 1fr 0.3fr 0.5fr 0.5fr 0.5fr 0.5fr; */
+  gap: 0px 0px;
+  grid-template-areas:
+    "p1 header header p2"
+    "p3 a_text a_viz p4"
+    "p3 b_text b_viz p4"
+    "p5 quote quote p6"
+    "p7 c_text c_text p8"
+    "p7 c_viz c_viz p8"
+    "p7 d_text d_text p8"
+    "p7 d_viz d_viz p8";
+}
+.header { grid-area: header; background-color: #980043; }
+.quote { grid-area: quote; background-color: #373737;}
+
+.p1 { grid-area: p1; background-color: #980043;}
+.p2 { grid-area: p2; background-color: #980043;}
+.p3 { grid-area: p3; background-color: #242424;}
+.p4 { grid-area: p4; background-color: #242424;}
+.p5 { grid-area: p5; background-color: #373737;}
+.p6 { grid-area: p6; background-color: #373737;}
+.p7 { grid-area: p7; background-color: #242424;}
+.p8 { grid-area: p8; background-color: #242424;}
+
+.a_text { grid-area: a_text; background-color: #242424;}
+.a_viz { grid-area: a_viz; background-color: #242424;}
+.b_text { grid-area: b_text; background-color: #242424;}
+.b_viz { grid-area: b_viz; background-color: #242424;}
+.c_text { grid-area: c_text; background-color: #242424;}
+.c_viz { grid-area: c_viz; background-color: #242424;}
+.d_text { grid-area: d_text; background-color: #242424;}
+.d_viz { grid-area: d_viz; background-color: #242424;}
+
+/* .header {
+  padding-top: 50vh;
+  text-align: left;
+  width: 100%;
+}  */
+
+.t {
+  padding: 1em;
+}
+
+.c {
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 96px;
+  font-family: 'EB Garamond', serif;
+  font-weight: lighter;
+  line-height: 0.5em;
+}
+
+h2 {
+  font-size: 48px;
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.note {
+  padding: 1em;
+  background-color: #373737;
+  color: #f1eef6; 
+  border-radius: 0.5em;
+}
+
+div {
+  border-width: 1px;
+  border-color: aqua;
+}
+
+em {
+  background-color: #980043;
+  font-style: normal;
+  font-weight: bolder;
+}
+
+.c_wrapper {
+  overflow: hidden;
+}
+
+.c_left {
+  float:left;
+}
+
+.c_right {
+  overflow: hidden;
+}
+
+.small {
+  font-size: 12pt;
+  color: #f1eef688;
+}
+
+.quote {
+  font-family: 'EB Garamond', serif;
+  font-size: 24pt;
+  line-height: 32pt;
+  padding-left: 10em;
+  padding-right: 10em;
+  text-align: center;
+}
