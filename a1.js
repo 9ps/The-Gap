@@ -32,7 +32,7 @@ function make_plot(csv_data){
 		},
 		
 		yaxis: {
-			title: 'Mortality Rate     ( Deaths per 1000 Infants )',
+			title: 'Mortality Rate     ( Deaths per 100,000 Infants )',
 			color: "#f1eef6",
 			range: [0, 70]
 		},
