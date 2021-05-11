@@ -102,7 +102,7 @@ function make_plot(csv_data){
 		
 		xaxis: {
             title: 'Gender Inequality Index',
-			color: "#f1eef6"
+			color: "#f1eef6",
 		},
 		
 		yaxis: {

@@ -20,37 +20,7 @@ function make_plot(csv_data){
         mode: 'lines',
         name: "Indian Male Infants",
         line: {
-			color: '#FF5F20',
-            width: 2
-		}
-    },
-    {
-        x: female.map(d => d.year),
-        y: female.map(d => d.rate),
-        mode: 'lines',
-        name: "Indian Female Infants",
-        line: {
-			color: '#7922BC',
-            width: 2
-		}
-    },
-    {
-        x: both.map(d => d.year),
-        y: both.map(d => d.rate),
-        mode: 'lines',
-        name: "Indian Infants",
-        line: {
-			color: '#DD1C77',
-            width: 2
-		}
-    },
-    {
-        x: world.map(d => d.year),
-        y: world.map(d => d.rate),
-        mode: 'lines',
-        name: "World Infants",
-        line: {
-			color: '#9DEF1E',
+			color: '#d95f02',
             width: 2
 		}
     },
@@ -58,10 +28,21 @@ function make_plot(csv_data){
         x: malep.map(d => d.year),
         y: malep.map(d => d.rate),
         mode: 'lines',
-        name: "Indian Male Infants (prediction)",
+        name: "predicted",
         line: {
             dash: 'dot',
-			color: '#FF5F20',
+			color: '#d95f02',
+            width: 2
+		}
+    },
+
+    {
+        x: female.map(d => d.year),
+        y: female.map(d => d.rate),
+        mode: 'lines',
+        name: "Indian Female Infants",
+        line: {
+			color: '#7570b3',
             width: 2
 		}
     },
@@ -69,10 +50,21 @@ function make_plot(csv_data){
         x: femalep.map(d => d.year),
         y: femalep.map(d => d.rate),
         mode: 'lines',
-        name: "Indian Female Infants (prediction)",
+        name: "predicted",
         line: {
             dash: 'dot',
-			color: '#7922BC',
+			color: '#7570b3',
+            width: 2
+		}
+    },
+
+    {
+        x: both.map(d => d.year),
+        y: both.map(d => d.rate),
+        mode: 'lines',
+        name: "Indian Infants",
+        line: {
+			color: '#e7298a',
             width: 2
 		}
     },
@@ -80,10 +72,21 @@ function make_plot(csv_data){
         x: bothp.map(d => d.year),
         y: bothp.map(d => d.rate),
         mode: 'lines',
-        name: "Indian Infants (prediction)",
+        name: "predicted",
         line: {
             dash: 'dot',
-			color: '#DD1C77',
+			color: '#e7298a',
+            width: 2
+		}
+    },
+
+    {
+        x: world.map(d => d.year),
+        y: world.map(d => d.rate),
+        mode: 'lines',
+        name: "World Infants",
+        line: {
+			color: '#1b9e77',
             width: 2
 		}
     },
@@ -91,34 +94,34 @@ function make_plot(csv_data){
         x: worldp.map(d => d.year),
         y: worldp.map(d => d.rate),
         mode: 'lines',
-        name: "World Infants <5 (prediction)",
+        name: "predicted",
         line: {
             dash: 'dot',
-			color: '#9DEF1E',
+			color: '#1b9e77',
             width: 2
 		}
     }];
 
       var layout = {
-        title:'Historic and Predicted Infant Mortality Rates',
+        title:'Historic and Predicted Infant Mortality Rates *',
 		width: 900,
 		height: 600,
-		plot_bgcolor: "#242424",
-		paper_bgcolor: "#242424",
+		plot_bgcolor: "#d4b9da",
+		paper_bgcolor: "#d4b9da",
 
 		font: {
 			size: 16,
-			family: "Lato, sans-serif",
-			color: "#f1eef6"
+			family: "Roboto Mono, monospaced",
+			color: "#000"
 		},
 		
 		xaxis: {
-			color: "#f1eef6"
+			color: "#000"
 		},
 		
 		yaxis: {
-			title: 'Mortality Rate     ( Deaths per 100,000 Infants )',
-			color: "#f1eef6"
+			title: 'Mortality Rate  ( Deaths per 100,000 Infants )',
+			color: "#000"
 		},
         legend: {
             x: 1,

@@ -26,8 +26,8 @@
     "p5 quote quote p6"
     "p7 c_text c_text p8"
     "p7 c_viz c_viz p8"
-    "p7 d_text d_text p8"
-    "p7 d_viz d_viz p8";
+    "p9 d_text d_text p10"
+    "p9 d_viz d_viz p10";
 }
 .header { grid-area: header; background-color: #980043; }
 .quote { grid-area: quote; background-color: #373737;}
@@ -40,6 +40,8 @@
 .p6 { grid-area: p6; background-color: #373737;}
 .p7 { grid-area: p7; background-color: #242424;}
 .p8 { grid-area: p8; background-color: #242424;}
+.p9 { grid-area: p9; background-color: #d4b9da;}
+.p10 { grid-area: p10; background-color: #d4b9da;}
 
 .a_text { grid-area: a_text; background-color: #242424;}
 .a_viz { grid-area: a_viz; background-color: #242424;}
@@ -47,8 +49,8 @@
 .b_viz { grid-area: b_viz; background-color: #242424;}
 .c_text { grid-area: c_text; background-color: #242424;}
 .c_viz { grid-area: c_viz; background-color: #242424;}
-.d_text { grid-area: d_text; background-color: #242424;}
-.d_viz { grid-area: d_viz; background-color: #242424;}
+.d_text { grid-area: d_text; background-color: #d4b9da;}
+.d_viz { grid-area: d_viz; background-color: #d4b9da;}
 
 /* .header {
   padding-top: 50vh;
@@ -66,10 +68,10 @@
 }
 
 h1 {
-  font-size: 96px;
+  font-size: 128px;
   font-family: 'EB Garamond', serif;
   font-weight: lighter;
-  line-height: 0.5em;
+  line-height: 128px;
 }
 
 h2 {
@@ -100,6 +102,10 @@ em {
 
 .c_wrapper {
   overflow: hidden;
+}
+
+.padbottom {
+  padding-bottom: 4em;
 }
 
 .c_left {
@@ -137,4 +143,24 @@ em {
 .test {
   width: 100%;
   background-color: aqua;
+}
+
+.b {
+  color: #000;
+}
+
+.em {
+  background-color: #df65b0;
+}
+
+.mid {
+  padding-left: 15vw;
+  padding-right: 15vw;
+}
+
+h3 {
+  font-family: 'EB Garamond', serif;
+  font-variant: small-caps;
+  line-height: 0;
+  font-weight: bold;
 }
