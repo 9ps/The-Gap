@@ -106,8 +106,8 @@ function make_plot(csv_data){
         title:'Historic and Predicted Infant Mortality Rates *',
 		width: 900,
 		height: 600,
-		plot_bgcolor: "#d4b9da",
-		paper_bgcolor: "#d4b9da",
+		plot_bgcolor: "#e7e1ef",
+		paper_bgcolor: "#e7e1ef",
 
 		font: {
 			size: 16,
@@ -116,11 +116,12 @@ function make_plot(csv_data){
 		},
 		
 		xaxis: {
+            range: [1990, 2030],
 			color: "#000"
 		},
 		
 		yaxis: {
-			title: 'Mortality Rate  ( Deaths per 100,000 Infants )',
+			title: 'Mortality Rate  ( Deaths per 1000 Infants )',
 			color: "#000"
 		},
         legend: {

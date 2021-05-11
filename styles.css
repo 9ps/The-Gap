@@ -40,8 +40,8 @@
 .p6 { grid-area: p6; background-color: #373737;}
 .p7 { grid-area: p7; background-color: #242424;}
 .p8 { grid-area: p8; background-color: #242424;}
-.p9 { grid-area: p9; background-color: #d4b9da;}
-.p10 { grid-area: p10; background-color: #d4b9da;}
+.p9 { grid-area: p9; background-color: #e7e1ef;}
+.p10 { grid-area: p10; background-color: #e7e1ef;}
 
 .a_text { grid-area: a_text; background-color: #242424;}
 .a_viz { grid-area: a_viz; background-color: #242424;}
@@ -49,8 +49,8 @@
 .b_viz { grid-area: b_viz; background-color: #242424;}
 .c_text { grid-area: c_text; background-color: #242424;}
 .c_viz { grid-area: c_viz; background-color: #242424;}
-.d_text { grid-area: d_text; background-color: #d4b9da;}
-.d_viz { grid-area: d_viz; background-color: #d4b9da;}
+.d_text { grid-area: d_text; background-color: #e7e1ef;}
+.d_viz { grid-area: d_viz; background-color: #e7e1ef;}
 
 /* .header {
   padding-top: 50vh;
