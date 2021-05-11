@@ -21,21 +21,41 @@ function make_plot(csv_data){
 
 		font: {
 			size: 16,
-			family: "Lato, sans-serif",
+			family: "Roboto Mono, monospace",
 			color: "#f1eef6"
 		},
 		
 		xaxis: {
-            title: 'Male                                                                                              Female',
 			color: "#f1eef6",
-			autotick: false
+			autotick: false,
+			showticklabels: false
 		},
 		
 		yaxis: {
-			title: 'Mortality Rate     ( Deaths per 100,000 Infants )',
+			title: 'Mortality Rate  ( Deaths per 1000 Infants )',
 			color: "#f1eef6",
-			range: [0, 70]
+			range: [0, 50]
 		},
+
+		annotations: [{
+			xref: 'paper',
+			yref: 'paper',
+			x: 1,
+			xanchor: 'right',
+			y: 0,
+			yanchor: 'top',
+			text: 'Female',
+			showarrow: false
+		  }, {
+			xref: 'paper',
+			yref: 'paper',
+			x: 0,
+			xanchor: 'left',
+			y: 0,
+			yanchor: 'top',
+			text: 'Male',
+			showarrow: false
+		  }],
 
 		showlegend: false,
 		hovermode: "closest",
@@ -64,11 +84,16 @@ function getObjIndia(country, male, female) {
         x: [0, 1],
         y: [male, female],
         name: country,
-		mode: 'lines',
+		mode: 'lines+text',
 		line: {
 			color: '#df65b0',
 			width: 10
-		}
+		},
+		text: ['India'],
+		textposition: 'right',
+		textfont: {
+			size: 18,
+		  }
     }];
     return trace;
 }

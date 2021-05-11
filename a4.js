@@ -1,29 +1,94 @@
 function make_plot(csv_data){
 
-    country = [];
-    ratio = [];
-    diff = [];
-
-    for(var i = 0; i < csv_data.length; i++){
-        country.push(csv_data[i].country);
-        ratio.push(csv_data[i].ratio);
-        diff.push(csv_data[i].diff * 100 + 100);
-    }
+    let sa = csv_data.filter(d => d.region == "South Asia");
+    let ea = csv_data.filter(d => d.region == "East Asia");
+    let aa = csv_data.filter(d => d.region == "Other Australasia");
+    let eu = csv_data.filter(d => d.region == "Europe");
+    let af = csv_data.filter(d => d.region == "Africa");
+    let am = csv_data.filter(d => d.region == "Americas");
 
     let data = [
-    {
-        text: country,
-        x: ratio,
-        y: diff,
+    {   
+        name: "South Asia",
+        text: sa.map(d => d.country),
+        x: sa.map(d => d.ratio),
+        y: sa.map(d => d.diff * 100 + 100),
         mode: 'markers',
         marker: {
             size: 10,
-            color: ['#dd1c77', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8', '#d7b5d8']
+            color: '#e7298a'
         }
+    },
+    {
+        name: "East Asia",
+        text: ea.map(d => d.country),
+        x: ea.map(d => d.ratio),
+        y: ea.map(d => d.diff * 100 + 100),
+        mode: 'markers',
+        marker: {
+            size: 10,
+            color: '#7570b3'
+        }
+    },
+    {
+        name: "Other Australasia",
+        text: aa.map(d => d.country),
+        x: aa.map(d => d.ratio),
+        y: aa.map(d => d.diff * 100 + 100),
+        mode: 'markers',
+        marker: {
+            size: 10,
+            color: '#d95f02'
+        }
+    },
+    {
+        name: "Europe",
+        text: eu.map(d => d.country),
+        x: eu.map(d => d.ratio),
+        y: eu.map(d => d.diff * 100 + 100),
+        mode: 'markers',
+        marker: {
+            size: 10,
+            color: '#1b9e77'
+        }
+    },
+    {
+        name: "Americas",
+        text: am.map(d => d.country),
+        x: am.map(d => d.ratio),
+        y: am.map(d => d.diff * 100 + 100),
+        mode: 'markers',
+        marker: {
+            size: 10,
+            color: '#66a61e'
+        }
+    },
+    {
+        name: "Africa",
+        text: af.map(d => d.country),
+        x: af.map(d => d.ratio),
+        y: af.map(d => d.diff * 100 + 100),
+        mode: 'markers',
+        marker: {
+            size: 10,
+            color: '#e6ab02'
+        }
+    },
+    {
+        name: "trend",
+        text: "trend",
+        x: [101, 111],
+        y: [115, 117.5],
+        mode: 'lines',
+        line: {
+            dash: 'dot',
+			color: '#980043',
+            width: 2
+		}
     }];
     
       var layout = {
-        title:'M : F Births compared to M : F Infant Mortality',
+        title:'Sex Ratio at Birth Comparison',
 		width: 700,
 		height: 600,
 		plot_bgcolor: "#242424",
@@ -31,7 +96,7 @@ function make_plot(csv_data){
 
 		font: {
 			size: 16,
-			family: "Lato, sans-serif",
+			family: "Roboto Mono, monospace",
 			color: "#f1eef6"
 		},
 		
@@ -41,11 +106,11 @@ function make_plot(csv_data){
 		},
 		
 		yaxis: {
-			title: 'M : F Infant Mortality',
+			title: 'Sex Ratio of Infant Mortality',
 			color: "#f1eef6"
 		},
 		
-		showlegend: false,
+		showlegend: true,
 		hovermode: "closest",
 		hoverlabel: { bgcolor: "#FFF"},
 	  };
