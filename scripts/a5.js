@@ -103,11 +103,11 @@ function make_plot(csv_data){
     }];
 
       var layout = {
-        title:'Historic and Predicted Infant Mortality Rates *',
-		width: 900,
+        title:'Predicted Infant Mortality Rates *',
+		width: 600,
 		height: 600,
-		plot_bgcolor: "#e7e1ef",
-		paper_bgcolor: "#e7e1ef",
+		plot_bgcolor: "#C6C6BE",
+		paper_bgcolor: "#C6C6BE",
 
 		font: {
 			size: 16,
@@ -134,10 +134,10 @@ function make_plot(csv_data){
 		hoverlabel: { bgcolor: "#FFF"},
 	  };
 
-
+      const config = {displayModeBar: false};
     //Draw the plot at our div
-    Plotly.newPlot('divE', data, layout);
+    Plotly.newPlot('divE', data, layout, config);
 }
 
 //Load the csv data and when loaded: run the make_plot function with that data
-Plotly.d3.csv("a5.csv", make_plot);
+Plotly.d3.csv("data/a5.csv", make_plot);

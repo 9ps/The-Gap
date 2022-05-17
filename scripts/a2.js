@@ -53,10 +53,10 @@ function make_plot(csv_data) {
 
   var layout = {
     title: 'Sex Ratio of Infant Mortality *',
-    width: 1000,
+    width: 600,
     height: 600,
-    plot_bgcolor: "#242424",
-    paper_bgcolor: "#242424",
+		plot_bgcolor: "#2A1321",
+		paper_bgcolor: "#2A1321",
 
     font: {
       size: 16,
@@ -85,9 +85,10 @@ function make_plot(csv_data) {
     },
   };
 
+  const config = {displayModeBar: false}
   //Draw the plot at our div
-  Plotly.newPlot('divB', data, layout);
+  Plotly.newPlot('divB', data, layout, config);
 }
 
 //Load the csv data and when loaded: run the make_plot function with that data
-Plotly.d3.csv("a2.csv", make_plot);
+Plotly.d3.csv("data/a2.csv", make_plot);
