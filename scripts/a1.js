@@ -14,13 +14,12 @@ function make_plot(csv_data){
 
 	var layout = {
 		title:'Male to Female Infant Morality per Country *',
-		width: 600,
 		height: 800,
 		plot_bgcolor: "#2A1321",
 		paper_bgcolor: "#2A1321",
 		
 		font: {
-			size: 14,
+			size: 12,
 			family: "Inter, Roboto",
 			color: "#f1eef6"
 		},
@@ -62,7 +61,7 @@ function make_plot(csv_data){
 		hoverlabel: { bgcolor: "#FFF"},
 	  };
 	
-	const config = {displayModeBar: false}
+	const config = {displayModeBar: false, responsive: true}
 	//Draw the plot at our div
 	Plotly.newPlot('divA', data, layout, config);
 }
@@ -88,7 +87,7 @@ function getObjIndia(country, male, female) {
 		mode: 'lines+text',
 		line: {
 			color: '#df65b0',
-			width: 10
+			width: 10,
 		},
 		text: ['India'],
 		textposition: 'right',

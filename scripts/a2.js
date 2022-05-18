@@ -53,13 +53,12 @@ function make_plot(csv_data) {
 
   var layout = {
     title: 'Sex Ratio of Infant Mortality *',
-    width: 600,
     height: 600,
 		plot_bgcolor: "#2A1321",
 		paper_bgcolor: "#2A1321",
 
     font: {
-      size: 16,
+      size: 12,
       family: "Roboto Mono, monospace",
       color: "#f1eef6"
     },
@@ -85,7 +84,7 @@ function make_plot(csv_data) {
     },
   };
 
-  const config = {displayModeBar: false}
+	const config = {displayModeBar: false, responsive: true}
   //Draw the plot at our div
   Plotly.newPlot('divB', data, layout, config);
 }

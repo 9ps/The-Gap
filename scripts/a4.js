@@ -99,15 +99,15 @@ function make_plot(csv_data){
 		}
     }];
     
+
       var layout = {
         title:'Sex Ratio at Birth Comparison',
-		width: 600,
 		height: 600,
 		plot_bgcolor: "#2A1321",
 		paper_bgcolor: "#2A1321",
 
 		font: {
-			size: 16,
+			size: 12,
 			family: "Roboto Mono, monospace",
 			color: "#f1eef6"
 		},
@@ -121,13 +121,17 @@ function make_plot(csv_data){
 			title: 'Sex Ratio of Infant Mortality',
 			color: "#f1eef6"
 		},
-		
+        legend: {
+            x: 0,
+            xanchor: 'left',
+            y: 0
+          },
 		showlegend: true,
 		hovermode: "closest",
 		hoverlabel: { bgcolor: "#FFF"},
 	  };
-      const config = {displayModeBar: false};
-    Plotly.newPlot('divD', data, layout, config);
+      const config = {displayModeBar: false, responsive: true}
+      Plotly.newPlot('divD', data, layout, config);
 }
 
 Plotly.d3.csv("data/a4.csv", make_plot);

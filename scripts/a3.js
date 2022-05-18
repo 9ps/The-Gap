@@ -99,15 +99,15 @@ function make_plot(csv_data){
 		}
     }];
 
+
       var layout = {
         title:'GII correlation',
-		width: 600,
 		height: 600,
 		plot_bgcolor: "#2A1321",
 		paper_bgcolor: "#2A1321",
 
 		font: {
-			size: 16,
+			size: 12,
 			family: "Roboto Mono, monospace",
 			color: "#f1eef6"
 		},
@@ -120,12 +120,12 @@ function make_plot(csv_data){
 		yaxis: {
 			title: 'Sex Ratio of Infant Mortality',
 			color: "#f1eef6"
-		},		
-		showlegend: true,
+		},	
+		showlegend: false,
 		hovermode: "closest",
 		hoverlabel: { bgcolor: "#FFF"},
 	  };
-      const config = {displayModeBar: false};
+      const config = {displayModeBar: false, responsive: true}
 
     Plotly.newPlot('divC', data, layout, config);
 }

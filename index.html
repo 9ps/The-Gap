@@ -10,7 +10,7 @@
 
   <body>
     <header>
-      <div class="title--main">
+      <div class="title title--main">
         <div class="title__row">
           <h1 class="title__text-top">The</h1>
           <img class="title__img-top" src="img/a.svg" />
@@ -39,7 +39,9 @@
       </p>
 
       <!-- Graph 1 -->
-      <div class="viz" id="divA"></div>
+      <div class="viz">
+        <div id="divA"></div>
+      </div>
       <h3>* in 2019, for countries with >10m population</h3>
 
       <p>
@@ -80,7 +82,7 @@
       </p>
 
       <!-- Graph 2 -->
-      <div class="viz" id="divB"></div>
+      <div class="viz"><div id="divB"></div></div>
       <h3>* e.g. A Sex Ratio of 85: 85 boys die per 100 girls</h3>
 
       <p>
@@ -141,11 +143,11 @@
         Female Infant Mortality.
       </p>
 
-      <div class="viz" id="divC"></div>
+      <div class="viz"><div id="divC"></div></div>
 
       <!-- Viz -->
 
-      <details>
+      <details open>
         <summary>The Dowry</summary>
         <p>
           The dowry system requires the family of the bride to transfer assets
@@ -161,7 +163,7 @@
         </p>
       </details>
 
-      <details>
+      <details open>
         <summary>Religious Social Roles</summary>
         <p>
           The system of hypergamy, requiring women to marry into higher castes,
@@ -183,9 +185,9 @@
       </p>
 
       <!-- Viz -->
-      <div class="viz" , id="divD"></div>
+      <div class="viz"><div id="divD"></div></div>
 
-      <details>
+      <details open>
         <summary> Prenatal Diagnostic Technology</summary>
         <p>
           In the 1980’s, Amniocentesis and Ultrasound technologies allowed for
@@ -198,7 +200,7 @@
         </p>
       </details>
 
-      <details>
+      <details open>
         <summary> Mechanisation of Agriculture</summary>
         <p>
           The same period saw the displacement of the traditional work of rural
@@ -232,8 +234,7 @@
         ingrained social norms that uniquely continue inequality - counteract
         the dowry system, provide women and girls with greater agency and power.
 
-        <details
-          ><summary class="summary--dark">Legalistic Solutions</summary>
+        <details open><summary class="summary--dark">Legalistic Solutions</summary>
           <p>
             Such as the prevention of ultrasound gender identification, banning
             of the dowry, have no impact due to their lack of enforcement.
@@ -244,13 +245,12 @@
               >have had limited success … as parents have simply adopted
               different methods of killing baby girls</q
             >
-            <sup><a href="#bio">[8]</a></sup
+            <sup><a class="a--dark" href="#bio">[8]</a></sup
             >.
           </p>
         </details>
 
-        <details
-          ><summary class="summary--dark"
+        <details open><summary class="summary--dark"
             >Cash Transfer based Solutions</summary
           >
           <p>
@@ -263,8 +263,7 @@
           </p>
         </details>
 
-        <details
-          ><summary class="summary--dark">Education based Solutions</summary>
+        <details open><summary class="summary--dark">Education based Solutions</summary>
           <p>
             The <em>2006 Care for Girls Campaign</em> in China, assisted with a
             decline in male-dominated sex ratio at birth. It is a composite
@@ -276,8 +275,7 @@
               >counseling to expectant mothers, monetary incentives and
               childcare support, health education</q
             >
-            <sup><a href="#bio">[8]</a></sup
-            >, which have been important drivers of improving female infant
+            <a class="a--dark" href="#bio"><sup>[8]</sup></a>, which have been important drivers of improving female infant
             mortality rates.
           </p>
         </details>
@@ -315,10 +313,8 @@
       </ul>
 
       <!-- Visulisation -->
-      <div class="viz" , id="divE"></div>
-      <p class="c small b padbottom">
-        * Values from 2020 -> 2049 are predicted
-      </p>
+      <div class="viz"><div id="divE"></div></div>
+      <h3 class="h3--dark">* Values from 2020 -> 2049 are predicted</h3>
 
       <p>
         Such a change would require the

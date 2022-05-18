@@ -42,6 +42,11 @@ h3 {
   font-size: 16px;
   text-align: center;
   max-width: 600px;
+  width: 90%;
+}
+
+.h3--dark {
+  color: var(--p60);
 }
 
 header {
@@ -49,23 +54,42 @@ header {
   color: var(--w10);
 }
 
+sup {
+  vertical-align: top;
+  position: relative; top: -0.5em;  
+}
+
 a {
   text-decoration: none;
   color: var(--w40);
-  font-size: 14px;
   cursor: pointer;
+  font-size: 12px;
+}
+
+a:hover {
+  color: var(--w20);
+}
+
+.a--dark {
+ color: var(--p60);
+}
+
+.a--dark:hover {
+  color: var(--p80);
 }
 
 p {
   padding-top: 20px;
   line-height: 1.5;
   max-width: 600px;
+  width: 90%;
 }
 
 ul {
   padding-top: 20px;
   line-height: 1.5;
   max-width: 600px;
+  width: 90%;
 }
 
 ol {
@@ -73,6 +97,7 @@ ol {
   max-width: 600px;
   color: var(--w40);
   padding-bottom: 100px;
+  width: 90%;
 }
 
 ol > li {
@@ -95,15 +120,15 @@ em:hover {
 
 /*  */
 
-.title--main {
-  width: 100%;
-  max-width: 600px;
+
+.title {
+  width: 90%;
+  max-width: 300px;
   margin: 0 auto;
 }
 
-.title {
-  width: 100%;
-  max-width: 300px;
+.title--main {
+  max-width: 600px;
 }
 
 .title__row {
@@ -168,10 +193,16 @@ section {
 }
 
 .viz {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0px;
+  margin: 20px 0px;  
+  border: 2px solid var(--p10);
+  border-radius: 4px;
+
+  width: 100%;
+  max-width: 800px;
+}
+
+.viz:hover {
+  outline: 3px solid var(--p10);
 }
 
 /*  */
@@ -180,6 +211,7 @@ blockquote {
   font-size: 28px;
   font-family: "Cormorant", "Garamond", serif;
   font-weight: normal;
+  width: 90%;
   max-width: 1000px;
   text-align: center;
   line-height: 1.5;
@@ -193,17 +225,22 @@ blockquote {
 /*  */
 
 details {
-  width: 100%;
+  width: 90%;
   max-width: 600px;
   margin: 10px 0px;
   border: 2px solid var(--p10);
   border-radius: 4px;
 }
 
+details:hover {
+  outline: 3px solid var(--p10);
+}
+
 summary {
   font-weight: bold;
   background-color: var(--p80);
   padding: 10px 20px;
+  cursor: pointer;
 }
 
 details[open] p {
@@ -216,4 +253,19 @@ details[open] summary {
 
 .summary--dark {
   background-color: var(--w40);
+}
+
+@media screen and (max-width: 640px) {
+  p, a, ul, li, q, em, summary {
+    font-size: 16px;
+  }
+
+  blockquote {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
 }
