@@ -1,13 +1,11 @@
 function make_plot(csv_data) {
-  //Filter our csv data for a particular country
-  //Try logging country_data to the console to see what's in it
-
+  // filter into seperate countries
   let australia_data = csv_data.filter(d => d.country == "Australia");
   let china_data = csv_data.filter(d => d.country == "China");
   let india_data = csv_data.filter(d => d.country == "India");
   let world_data = csv_data.filter(d => d.country == "World");
 
-  //Add our main data trace
+  //main data trace
   let data = [{
       x: australia_data.map(d => d.year),
       y: australia_data.map(d => d.diff * 100 + 100),
@@ -34,11 +32,6 @@ function make_plot(csv_data) {
         color: '#dd1c77',
         width: 4
       },
-      // text: ["hiii"],
-      // textposition: 'top',
-      // textfont: {
-      //   size: 18,
-      // }
     },
     {
       x: world_data.map(d => d.year),
@@ -52,6 +45,7 @@ function make_plot(csv_data) {
   ];
 
   var layout = {
+    
     title: 'Sex Ratio of Infant Mortality *',
     height: 600,
 		plot_bgcolor: "#2A1321",
@@ -84,10 +78,12 @@ function make_plot(csv_data) {
     },
   };
 
+  //remove annoying display, allow resizing
 	const config = {displayModeBar: false, responsive: true}
-  //Draw the plot at our div
+  
+  //make plot
   Plotly.newPlot('divB', data, layout, config);
 }
 
-//Load the csv data and when loaded: run the make_plot function with that data
+//load
 Plotly.d3.csv("data/a2.csv", make_plot);

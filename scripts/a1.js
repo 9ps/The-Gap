@@ -20,7 +20,7 @@ function make_plot(csv_data){
 		
 		font: {
 			size: 12,
-			family: "Inter, Roboto",
+			family: "Roboto Mono",
 			color: "#f1eef6"
 		},
 		

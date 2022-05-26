@@ -99,12 +99,24 @@ function make_plot(csv_data){
 		}
     }];
 
+    var legend = window.innerWidth > 600 ? true : false; 
+    var ll = 80
+    var rr = 80;
+    if(!legend){
+        ll = 50;
+        rr = 20;
+    }
 
       var layout = {
         title:'GII correlation',
 		height: 600,
 		plot_bgcolor: "#2A1321",
 		paper_bgcolor: "#2A1321",
+
+        margin: {
+            l: ll,
+            r: rr,
+        },
 
 		font: {
 			size: 12,
@@ -121,7 +133,7 @@ function make_plot(csv_data){
 			title: 'Sex Ratio of Infant Mortality',
 			color: "#f1eef6"
 		},	
-		showlegend: false,
+		showlegend: legend,
 		hovermode: "closest",
 		hoverlabel: { bgcolor: "#FFF"},
 	  };

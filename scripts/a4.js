@@ -99,12 +99,24 @@ function make_plot(csv_data){
 		}
     }];
     
+    var legend = window.innerWidth > 600 ? true : false; 
+    var ll = 80
+    var rr = 80;
+    if(!legend){
+        ll = 50;
+        rr = 20;
+    }
 
       var layout = {
         title:'Sex Ratio at Birth Comparison',
 		height: 600,
 		plot_bgcolor: "#2A1321",
 		paper_bgcolor: "#2A1321",
+
+        margin: {
+            l: ll,
+            r: rr,
+        },
 
 		font: {
 			size: 12,
@@ -122,11 +134,11 @@ function make_plot(csv_data){
 			color: "#f1eef6"
 		},
         legend: {
-            x: 0,
-            xanchor: 'left',
-            y: 0
+            x: 1,
+            xanchor: 'right',
+            y: 1
           },
-		showlegend: true,
+		showlegend: legend,
 		hovermode: "closest",
 		hoverlabel: { bgcolor: "#FFF"},
 	  };

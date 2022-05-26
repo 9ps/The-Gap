@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;1,300&family=Inter&family=Roboto+Mono&display=swap');
 
 * {
   margin: 0;
@@ -14,7 +14,7 @@
   --p30: #B2578E;
   --p40: #9A4779;
   --p50: #980043;
-  --p60: #462037;
+  --p60: #61153b; 
   --p70: #381A2C;
   --p80: #2A1321;
   --p90: #1C0D16;
@@ -43,6 +43,7 @@ h3 {
   text-align: center;
   max-width: 600px;
   width: 90%;
+  font-family: "Roboto Mono", monospace;
 }
 
 .h3--dark {
@@ -193,17 +194,28 @@ section {
 }
 
 .viz {
-  margin: 20px 0px;  
+  margin: 20px 0px;
   border: 2px solid var(--p10);
   border-radius: 4px;
 
-  width: 100%;
+  width: 95%;
   max-width: 800px;
+}
+
+.viz--dark {
+  border: 2px solid var(--p60);
 }
 
 .viz:hover {
   outline: 3px solid var(--p10);
 }
+
+.viz--dark:hover {
+  outline: 3px solid var(--p60); 
+}
+
+
+
 
 /*  */
 
@@ -232,8 +244,16 @@ details {
   border-radius: 4px;
 }
 
+.details--dark {
+  border: 2px solid var(--p60);  
+}
+
 details:hover {
   outline: 3px solid var(--p10);
+}
+
+.details--dark:hover {
+  outline: 3px solid var(--p60);
 }
 
 summary {
@@ -241,6 +261,10 @@ summary {
   background-color: var(--p80);
   padding: 10px 20px;
   cursor: pointer;
+}
+
+.summary--dark {
+  background-color: var(--w40);
 }
 
 details[open] p {
@@ -251,9 +275,11 @@ details[open] summary {
   border-bottom: 2px solid var(--p10);
 }
 
-.summary--dark {
-  background-color: var(--w40);
+.details--dark[open] summary {
+  border-bottom: 2px solid var(--p60);
 }
+
+
 
 @media screen and (max-width: 640px) {
   p, a, ul, li, q, em, summary {

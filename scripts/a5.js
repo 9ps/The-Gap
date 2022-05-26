@@ -102,11 +102,24 @@ function make_plot(csv_data){
 		}
     }];
 
+    var legend = window.innerWidth > 600 ? true : false; 
+    var ll = 80
+    var rr = 80;
+    if(!legend){
+        ll = 50;
+        rr = 20;
+    }
+
       var layout = {
         title:'Predicted Infant Mortality Rates *',
 		height: 600,
 		plot_bgcolor: "#C6C6BE",
 		paper_bgcolor: "#C6C6BE",
+
+        margin: {
+            l: ll,
+            r: rr,
+        },
 
 		font: {
 			size: 12,
@@ -128,7 +141,7 @@ function make_plot(csv_data){
             xanchor: 'right',
             y: 1
           },
-        showlegend: false,
+        showlegend: legend,
 		hovermode: "closest",
 		hoverlabel: { bgcolor: "#FFF"},
 	  };
