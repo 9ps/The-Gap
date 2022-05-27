@@ -148,7 +148,7 @@ function make_plot(csv_data){
 
       const config = {displayModeBar: false, responsive: true}
       //Draw the plot at our div
-    Plotly.newPlot('divE', data, layout, config);
+    Plotly.newPlot('js-a5', data, layout, config);
 }
 
 //Load the csv data and when loaded: run the make_plot function with that data

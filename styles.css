@@ -47,7 +47,7 @@ h3 {
 }
 
 .h3--dark {
-  color: var(--p60);
+  color: var(--p70);
 }
 
 header {
@@ -126,6 +126,7 @@ em:hover {
   width: 90%;
   max-width: 300px;
   margin: 0 auto;
+  padding: 10px 0px;
 }
 
 .title--main {
@@ -169,7 +170,7 @@ em:hover {
 /*  */
 
 section {
-  padding: 50px 0px;
+  padding: 20px 0 50px 0;
   background-color: var(--p90);
   color: var(--w10);
   display: flex;
@@ -179,6 +180,7 @@ section {
 
 .section--quote {
   background-color: var(--p80);
+  padding: 20px 0px;
 }
 
 .section--white {
@@ -188,13 +190,12 @@ section {
 
 .subtitle {
   text-align: center;
-  margin-top: 20px;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 0px;
   background-color: #381A2C;
 }
 
 .viz {
-  margin: 20px 0px;
+  margin: 20px 0 10px 0;
   border: 2px solid var(--p10);
   border-radius: 4px;
 
@@ -224,7 +225,7 @@ blockquote {
   font-family: "Cormorant", "Garamond", serif;
   font-weight: normal;
   width: 90%;
-  max-width: 1000px;
+  max-width: 800px;
   text-align: center;
   line-height: 1.5;
 }

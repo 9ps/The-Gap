@@ -143,7 +143,7 @@ function make_plot(csv_data){
 		hoverlabel: { bgcolor: "#FFF"},
 	  };
       const config = {displayModeBar: false, responsive: true}
-      Plotly.newPlot('divD', data, layout, config);
+      Plotly.newPlot('js-a4', data, layout, config);
 }
 
 Plotly.d3.csv("data/a4.csv", make_plot);

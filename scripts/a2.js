@@ -4,7 +4,6 @@ function make_plot(csv_data) {
   let china_data = csv_data.filter(d => d.country == "China");
   let india_data = csv_data.filter(d => d.country == "India");
   let world_data = csv_data.filter(d => d.country == "World");
-
   //main data trace
   let data = [{
       x: australia_data.map(d => d.year),
@@ -82,7 +81,7 @@ function make_plot(csv_data) {
 	const config = {displayModeBar: false, responsive: true}
   
   //make plot
-  Plotly.newPlot('divB', data, layout, config);
+  Plotly.newPlot('js-a2', data, layout, config);
 }
 
 //load

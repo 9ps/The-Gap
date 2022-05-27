@@ -139,7 +139,7 @@ function make_plot(csv_data){
 	  };
       const config = {displayModeBar: false, responsive: true}
 
-    Plotly.newPlot('divC', data, layout, config);
+    Plotly.newPlot('js-a3', data, layout, config);
 }
 
 Plotly.d3.csv("data/a3.csv", make_plot);
